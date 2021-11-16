@@ -1,0 +1,10 @@
+ignores: [
+  '@commitlint/cli',
+  '@commitlint/config-angular',
+  '@pay-api/config-rc',
+  'depcheck',
+  'husky',
+  'ts-node',
+  'eslint-import-resolver-typescript',
+  'gh-pages',
+]
