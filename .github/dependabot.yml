@@ -1,0 +1,35 @@
+version: 2
+
+registries:
+  npm-github:
+    type: npm-registry
+    url: https://npm.pkg.github.com
+    token: ${{ secrets.READ_ONLY_PAT }}
+
+updates:
+  - package-ecosystem: npm
+    registries:
+      - npm-github
+    directory: /
+    schedule:
+      interval: weekly
+    assignees: [skilbjo]
+    rebase-strategy: auto
+    ignore:
+      - dependency-name: aws-cdk
+      - dependency-name: '@aws-cdk/core'
+      - dependency-name: '@aws-cdk/aws-*'
+    versioning-strategy: increase
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: fix
+      include: scope
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    assignees: [skilbjo]
+    commit-message:
+      prefix: fix
+      include: scope

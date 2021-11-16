@@ -1,0 +1,34 @@
+{
+  "name": "@pay-api/home",
+  "version": "0.0.1",
+  "repository": "github:pay-api/home.git",
+  "scripts": {
+    "prepare": "if [ -z \"$GITHUB_ACTIONS\" ]; then npx husky install; fi",
+    "eslint": "eslint .",
+    "depcheck": "depcheck"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "ISC",
+  "author": "skilbjo",
+  "keywords": [
+    "api",
+    "sdk",
+    "openapi"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "14.1.0",
+    "@commitlint/config-angular": "14.1.0",
+    "depcheck": "1.4.2",
+    "eslint": "8.1.0",
+    "gh-pages": "3.2.3",
+    "husky": "7.0.4"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-angular"
+    ]
+  },
+  "private": true
+}
