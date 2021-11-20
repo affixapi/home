@@ -1,5 +1,7 @@
 # home
 
+[![release](https://github.com/pay-api/home/actions/workflows/release.yml/badge.svg)](https://github.com/pay-api/home/actions/workflows/release.yml)
+
 ## instructions to deploy a new version
 
 Vist: <https://www.notion.so/pay-api/pay-api-973e2cf1cacb4c83a3743917ac727225>
