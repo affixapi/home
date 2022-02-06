@@ -16,11 +16,10 @@ updates:
     assignees: [skilbjo]
     rebase-strategy: auto
     ignore:
-      - dependency-name: aws-cdk
-      - dependency-name: '@aws-cdk/core'
-      - dependency-name: '@aws-cdk/aws-*'
+      - dependency-name: aws-sdk
+      - dependency-name: '@aws-sdk/*'
     versioning-strategy: increase
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 3
     commit-message:
       prefix: fix
       include: scope
@@ -30,6 +29,7 @@ updates:
     schedule:
       interval: weekly
     assignees: [skilbjo]
+    open-pull-requests-limit: 1
     commit-message:
       prefix: fix
       include: scope
