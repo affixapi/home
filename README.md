@@ -87,11 +87,16 @@ at the very end of the `html`, replace
 note that the `<a src>` attribute changed to `src="Word__logo.svg"` (hosted locally),
 as well as `<img class="page-cover-image" src="https://images.unsplash.com/photo-1535136104956-115a2cd67fc4?..."` to `<img class="page-cover-image" src="photo-1535136104956-115a2cd67fc4.jpeg"` (also hosted locally)
 
-## privacy policy
+## privacy policy + terms of service
 
+### privacy policy
+- username: john.skilbeck+termly@gmail.com
 - <https://app.termly.io/dashboard/website/5f27a0c8-1f5f-43c4-afb1-c4a2141c1847/privacy-policy>
 - add to website -> html format -> paste to public/privacy.html
 
+### terms of service
+- username: john.skilbeck+termly2@gmail.com
+- <https://app.termly.io/dashboard/website/599acae1-0ea2-42f1-b5f9-22ef47e80fae/terms-of-service>
 
 ## links
 - favicon generator: <https://favicon.io/favicon-converter/>
