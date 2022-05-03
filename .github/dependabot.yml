@@ -12,12 +12,15 @@ updates:
       - npm-github
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
     assignees: [skilbjo]
     rebase-strategy: auto
     ignore:
       - dependency-name: aws-sdk
       - dependency-name: '@aws-sdk/*'
+      - dependency-name: devtools-protocol
+      - dependency-name: '@commitlint/cli'
+      - dependency-name: '@commitlint/config-angular'
     versioning-strategy: increase
     open-pull-requests-limit: 3
     commit-message:
@@ -27,7 +30,7 @@ updates:
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
     assignees: [skilbjo]
     open-pull-requests-limit: 1
     commit-message:

@@ -21,7 +21,7 @@
     "@commitlint/cli": "16.2.4",
     "@commitlint/config-angular": "16.2.4",
     "@pay-api/config-rc": "1.0.114",
-    "@pay-api/eslint-config-rc": "npm:@pay-api/config-rc@1.0.107",
+    "@pay-api/eslint-config-rc": "npm:@pay-api/config-rc@1.0.114",
     "depcheck": "1.4.3",
     "eslint": "8.14.0",
     "gh-pages": "3.2.3",
