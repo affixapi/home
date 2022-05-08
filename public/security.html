@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>pay-api</title><link rel="icon" type="image/png" href="favicon.png"><style>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>security</title><style>
 
     <!-- https://security.stackexchange.com/q/167700 -->
     <meta http-equiv='Content-Security-Policy' content="
@@ -300,11 +300,23 @@ ol > li {
 .simple-table {
   margin-top: 1em;
   font-size: 0.875rem;
+  empty-cells: show;
+}
+.simple-table td {
+  height: 29px;
+  min-width: 120px;
 }
 
-.simple-table-header {
+.simple-table th {
+  height: 29px;
+  min-width: 120px;
+}
+
+.simple-table-header-color {
   background: rgb(247, 246, 243);
   color: black;
+}
+.simple-table-header {
   font-weight: 500;
 }
 
@@ -345,7 +357,7 @@ img.icon {
   display: block;
   object-fit: cover;
   width: 100%;
-  height: 30vh;
+  max-height: 30vh;
 }
 
 .page-header-icon {
@@ -511,39 +523,39 @@ blockquote {
 }
 .highlight-gray {
   color: rgba(120, 119, 116, 1);
-  fill: rgba(145, 145, 142, 1);
+  fill: rgba(120, 119, 116, 1);
 }
 .highlight-brown {
   color: rgba(159, 107, 83, 1);
-  fill: rgba(187, 132, 108, 1);
+  fill: rgba(159, 107, 83, 1);
 }
 .highlight-orange {
   color: rgba(217, 115, 13, 1);
-  fill: rgba(215, 129, 58, 1);
+  fill: rgba(217, 115, 13, 1);
 }
 .highlight-yellow {
   color: rgba(203, 145, 47, 1);
-  fill: rgba(203, 148, 51, 1);
+  fill: rgba(203, 145, 47, 1);
 }
 .highlight-teal {
   color: rgba(68, 131, 97, 1);
-  fill: rgba(108, 155, 125, 1);
+  fill: rgba(68, 131, 97, 1);
 }
 .highlight-blue {
   color: rgba(51, 126, 169, 1);
-  fill: rgba(91, 151, 189, 1);
+  fill: rgba(51, 126, 169, 1);
 }
 .highlight-purple {
   color: rgba(144, 101, 176, 1);
-  fill: rgba(167, 130, 195, 1);
+  fill: rgba(144, 101, 176, 1);
 }
 .highlight-pink {
   color: rgba(193, 76, 138, 1);
-  fill: rgba(205, 116, 159, 1);
+  fill: rgba(193, 76, 138, 1);
 }
 .highlight-red {
   color: rgba(212, 76, 71, 1);
-  fill: rgba(225, 111, 100, 1);
+  fill: rgba(212, 76, 71, 1);
 }
 .highlight-gray_background {
   background: rgba(241, 241, 239, 1);
@@ -578,39 +590,39 @@ blockquote {
 }
 .block-color-gray {
   color: rgba(120, 119, 116, 1);
-  fill: rgba(145, 145, 142, 1);
+  fill: rgba(120, 119, 116, 1);
 }
 .block-color-brown {
   color: rgba(159, 107, 83, 1);
-  fill: rgba(187, 132, 108, 1);
+  fill: rgba(159, 107, 83, 1);
 }
 .block-color-orange {
   color: rgba(217, 115, 13, 1);
-  fill: rgba(215, 129, 58, 1);
+  fill: rgba(217, 115, 13, 1);
 }
 .block-color-yellow {
   color: rgba(203, 145, 47, 1);
-  fill: rgba(203, 148, 51, 1);
+  fill: rgba(203, 145, 47, 1);
 }
 .block-color-teal {
   color: rgba(68, 131, 97, 1);
-  fill: rgba(108, 155, 125, 1);
+  fill: rgba(68, 131, 97, 1);
 }
 .block-color-blue {
   color: rgba(51, 126, 169, 1);
-  fill: rgba(91, 151, 189, 1);
+  fill: rgba(51, 126, 169, 1);
 }
 .block-color-purple {
   color: rgba(144, 101, 176, 1);
-  fill: rgba(167, 130, 195, 1);
+  fill: rgba(144, 101, 176, 1);
 }
 .block-color-pink {
   color: rgba(193, 76, 138, 1);
-  fill: rgba(205, 116, 159, 1);
+  fill: rgba(193, 76, 138, 1);
 }
 .block-color-red {
   color: rgba(212, 76, 71, 1);
-  fill: rgba(225, 111, 100, 1);
+  fill: rgba(212, 76, 71, 1);
 }
 .block-color-gray_background {
   background: rgba(241, 241, 239, 1);
@@ -643,6 +655,7 @@ blockquote {
 .select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
 .select-value-color-green { background-color: rgba(219, 237, 219, 1); }
 .select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
 .select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
 .select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
 .select-value-color-red { background-color: rgba(255, 226, 221, 1); }
@@ -667,14 +680,5 @@ blockquote {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 
-</style></head><body><article id="973e2cf1-cacb-4c83-a374-3917ac727225" class="page sans"><header>
-  <img class="page-cover-image" src="photo-1535136104956-115a2cd67fc4.jpeg" style="object-position:center 50%"/>
-    <!-- paste from notion starting here (do not include their img tag, we'll use ours -->
-<h1 class="page-title">pay-api</h1></header><div class="page-body"><p id="c50bb4aa-0444-4131-906f-57afb7b9e913" class=""><strong><span style="border-bottom:0.05em solid">start</span></strong></p><div id="31d5322c-5ba2-466a-8710-75af4e07d31b" class="column-list"><div id="0a6b1daa-b1dc-4e70-87bf-7812a6597772" style="width:50%" class="column"><p id="cc58c68a-3b9b-4613-ac5f-4feb512992be" class=""><a href="https://www.loom.com/share/6bca9e77500d4f9e8d52d73e8b521f68">demo</a></p></div><div id="a45f3bd3-bc80-4c5a-ad13-dc0d09a36456" style="width:50%" class="column"><p id="b534cf9a-2232-4975-a6d7-e613dd143016" class=""><a href="https://register.pay-api.link">register</a> (a <code>client_id</code>)</p></div></div><p id="ee5dd166-347f-4374-8f98-e19856f33cc6" class=""><a href="https://connect.pay-api.link/?client_id=88C0525D-067C4B8B-A96DD467-FAD7BE72&amp;mode=retail&amp;scopes=identity%20transactions%20&amp;redirect_uri=https://pay-api.link">connect</a></p><p id="b3c8e19f-36b8-414e-88ec-1e707ef3228e" class="">
-</p><p id="fc867c2f-cd0d-4b22-8663-21f00f5a4d14" class=""><strong><span style="border-bottom:0.05em solid">build</span></strong></p><div id="f5c6edd4-1a2b-4cca-8ee1-9da6584e463c" class="column-list"><div id="d8cb1921-3c33-4220-b613-18ccf66c0532" style="width:50%" class="column"><p id="ee4453f1-9d75-4db0-936e-401a97efdca9" class=""><a href="https://github.com/pay-api/starter-kit">starter-kit</a></p><p id="31b88bb5-0cdf-43d8-b1c9-bb5bcad95309" class=""><a href="https://docs.pay-api.link">docs</a></p></div><div id="3bf8d18f-36b9-4a8f-9676-0bc31f592598" style="width:50%" class="column"><p id="0ed652ad-0496-41bf-bc4c-73c5f2b6b6eb" class=""><a href="https://www.npmjs.com/package/@pay-api/api">sdk</a></p><p id="e89c0319-d8e4-4c93-aad5-1997182d4d20" class=""><a href="https://status.pay-api.link">status</a></p></div></div><p id="e9513476-8128-4cc5-a505-70a761552925" class="">
-</p><p id="06089f85-bebd-40db-aee6-66261c79e758" class=""><span style="border-bottom:0.05em solid"><strong>pricing</strong></span></p><p id="0c055ed6-617f-4eb7-bf34-5a0ebeee8a56" class="">$20 / month per client_id (via gumroad)</p><p id="ed4de183-a425-40f0-af14-337672f9beb6" class="">+ $5 / active token (not sandbox, not disconnected) (invoiced over stripe)</p><p id="b35da6ed-1ee4-4263-af68-514dedf4db05" class="">no contracts, cancel anytime via gumroad</p><p id="e02e1112-2cae-4c68-b249-0562c5fdaf8b" class="">
-</p><p id="3a615e5c-1747-43a5-9f2a-b447ba96fd7f" class=""><span style="border-bottom:0.05em solid"><strong>security + legal</strong></span></p><div id="d8e23977-7713-4638-b064-1c677b3fa12a" class="column-list"><div id="2130bb26-27eb-45c5-8319-74128aacd2c9" style="width:50%" class="column"><p id="8fcb7a45-561c-4b03-b8bc-e41d69f413c6" class=""><a href="https://pay-api.link/security">security</a></p></div><div id="389e6f9f-9dfb-44ae-9814-c02ee079c0c8" style="width:50%" class="column"><p id="20e4cb5b-a6e1-46e2-9cfa-ea6f61e4a486" class=""><a href="https://pay-api.link/privacy">privacy</a></p></div></div><p id="e1510beb-52c0-4297-91b8-f576793c9bbf" class=""><a href="https://pay-api.link/terms-of-service">terms of service</a></p><p id="ccc8bd5c-33f0-4531-8599-fc7173ef2623" class="">
-</p><p id="9f508314-e4f7-47df-90ca-f0a804d1560e" class=""><span style="border-bottom:0.05em solid"><strong>team</strong></span></p><p id="6dae1cd1-29fd-4886-96d6-a0dc711f9016" class=""><a href="https://www.linkedin.com/in/skilbeck/">john</a></p><p id="dea0ee1b-4bd9-4c45-b185-a87fa420a10e" class="">
-</p><p id="32ad4780-be3a-40ef-ab55-ae0768af2a3d" class="">
-    <!-- end pasting -->
-</p><figure id="623a482a-c65c-4d5a-af29-e424c89b3543" class="image"><a href="Word__logo.svg"><img style="width:672px" src="Word__logo.svg"/></a></figure></div></article></body></html>
+</style></head><body><article id="f3977313-5b5d-4b96-b34b-8ac18b364cab" class="page sans"><header><h1 class="page-title">security</h1></header><div class="page-body"><h2 id="5c67cc34-e94d-4fac-854b-8f88165f9b28" class="">pay-api takes data security and privacy very seriously.</h2><h3 id="9917048f-841d-4e76-b925-c02c73db37c9" class="">this page provides general information about our data practices to give you confidence in how we secure your data.</h3><p id="947367ba-5339-4797-a7f7-02f9125f826c" class="">
+</p><h3 id="95cd131c-2a81-4974-be57-2f0aa9ea9536" class="">data center security</h3><ul id="19a14357-9bbe-4820-a042-d23f7452e2fa" class="bulleted-list"><li style="list-style-type:disc">pay-api hosts its api service infrastructure on Amazon Web Services (AWS)</li></ul><ul id="b24fa308-42ac-4aba-8563-a9f1b9ae61d3" class="bulleted-list"><li style="list-style-type:disc">pay-api hosts the Connect front-end application on Github Pages</li></ul><ul id="ae6a622f-d0a5-4cb5-956a-eab1e405e810" class="bulleted-list"><li style="list-style-type:disc">We follow AWS best practices which allows us to take advantage from their secured, distributed, fault tolerant environment. To find out more information about AWS security practices, see: <a href="https://aws.amazon.com/security">https://aws.amazon.com/security</a></li></ul><h3 id="c18e8ee5-bdbf-4b73-95f9-5b2fd01cd71b" class="">f<strong>ailover and disaster recovery</strong></h3><ul id="f74e0f93-ce45-4746-923a-b637ba67ef3c" class="bulleted-list"><li style="list-style-type:disc">our infrastructure and systems use only serverless AWS services, which provide high availability. </li></ul><ul id="5168e609-64bf-49ed-8ea7-5e6b75af3643" class="bulleted-list"><li style="list-style-type:disc">all of the application service infrastructure, as well as the underlying AWS infrastructure, is codified</li></ul><h3 id="f2eb2e67-e636-4627-9f27-f708ba67025d" class="">data storage + retention policies</h3><ul id="29ca10d1-38b0-4ea3-9cce-fc7c86385543" class="bulleted-list"><li style="list-style-type:disc">our intention is to act as the glue between the developer and the provider</li></ul><ul id="849f5e42-4820-4e18-b9c8-fac0dc88bab4" class="bulleted-list"><li style="list-style-type:disc">we view data as a liability and have no interest in the content of the data</li></ul><ul id="4ea9b6b6-2335-4dc4-8957-0c4107f899dd" class="bulleted-list"><li style="list-style-type:disc">we do not sell user data. we only share user data with a single party, the developer, and only user data that the user has explicitly authorized us to share</li></ul><ul id="9cf595a5-9e53-4687-b844-ec043eb2987f" class="bulleted-list"><li style="list-style-type:disc">usernames and passwords are not currently stored but we reserve the right to store them at a future time if we determine our service quality can be improved by storing them</li></ul><ul id="4ec5bf26-ff6e-41fe-b8d1-df3039e5a31c" class="bulleted-list"><li style="list-style-type:disc">we store cookies indefinitely, which is how we provide access to providers</li></ul><ul id="1c8976d5-4e21-46e5-8e7e-c59341940c7e" class="bulleted-list"><li style="list-style-type:disc">our database, AWS DynamoDB, is secured via AWS IAM, and internal systems are provided access via the principal of least privilege</li></ul><ul id="66dc1c9b-6bcb-4dea-95b6-0f7327a7da9e" class="bulleted-list"><li style="list-style-type:disc">the developer may delete any stored user data (ie, cookies) in our system by making a call to the disconnect endpoint</li></ul><ul id="42814099-6ae5-4843-bd38-ad3b957dcbc0" class="bulleted-list"><li style="list-style-type:disc">our systems use AWS Cloudwatch for logging. our log retention policy is two weeks</li></ul><ul id="f46e4d89-a3d8-45b3-9570-e8f97b319299" class="bulleted-list"><li style="list-style-type:disc">to debug errors that may occur with user configurations we may not have seen before, we may programmatically screenshot errors on a customer account while attempting to fulfill your api request. the screenshots are only used for debugging, and are used for no other purpose. the retention policy on those screenshots is two weeks</li></ul><h3 id="84fb357b-e7a9-4a16-9e1b-70e1cfea9ad7" class="">encryption</h3><ul id="1ec555f5-030c-4136-8090-f91262cedfa0" class="bulleted-list"><li style="list-style-type:disc">traffic between you or customers and the pay-api application is encrypted in-transit with TLS</li></ul><h3 id="38379dc1-a714-4d8a-bf92-5ea80d33dd1f" class="">source code</h3><ul id="750e1d9d-88a7-4b99-9fb2-2a415cdb4c3a" class="bulleted-list"><li style="list-style-type:disc">application infrastructure is codified via aws-cdk, and AWS infrastructure is codified via org-formation, and all changes to infrastructure or application source code are done via git</li></ul><h3 id="61bb3bff-ab4b-4c4d-bddb-42bb0aa008c9" class="">caching</h3><ul id="0d8cad6c-8708-4287-95a5-2ddaf03100b2" class="bulleted-list"><li style="list-style-type:disc">we cache aggressively to reduce latencies, but our retention policies on cached data is always less than two weeks</li></ul><h3 id="2d3e4929-a3a0-46de-bf02-6284668425df" class=""><strong>internal it security</strong></h3><ul id="3a66dee7-f3b8-4146-9f52-f0e8c9bab8b9" class="bulleted-list"><li style="list-style-type:disc">access to AWS infrastructure, and source code, are secured with two-factor auth</li></ul><ul id="122b7630-48ec-473d-a22f-5edb85d67293" class="bulleted-list"><li style="list-style-type:disc">no employees currently, but if we do, employees will be given the lowest level of access that allows them to get their work done, and employee contracts will include a confidentiality agreement. only authorized employees would have access to our software version control</li></ul><h3 id="3e3a61b0-daca-4e35-888b-62bc6e2e8f7e" class="">third party systems</h3><ul id="c43f4024-6e22-414a-ad52-31c5a7794298" class="bulleted-list"><li style="list-style-type:disc">we use sentry for error alerting. any sensitive payloads sent to sentry are scrubbed of any identifiable information</li></ul><h3 id="edbb1469-6fec-4e9b-a5be-7d03bdc48fba" class="">payments</h3><ul id="403fa8fc-a6e3-47cf-9374-bc4854ff688c" class="bulleted-list"><li style="list-style-type:disc">When you purchase a paid pay-api client_id, your payment data is not transmitted through nor stored on pay-api systems</li></ul><ul id="b992fe32-3a3c-45fd-bc8c-9c57ec9ab94a" class="bulleted-list"><li style="list-style-type:disc">When you purchase a client_id via Gumroad, your payment is processed using PCI Compliant service providers (as of May 2022, are PayPal Connect, Apple Pay, or Google Pay). Per Gumroad, your payment details are not stored on nor transmitted via Gumroad’s systems. To find out more about Gumroad’s security information, see: <a href="https://customers.gumroad.com/article/189-safe-gumroad-buying">https://customers.gumroad.com/article/189-safe-gumroad-buying</a> <ul id="aef0522a-d1d6-4ee9-977a-a5aeb9ef735c" class="bulleted-list"><li style="list-style-type:circle">Your email address that you use for the purchase is shared with pay-api, to initially set your client name, which we encourage you to email us after purchase to set your preferred application name, which is shown to your customers via Connect</li></ul><ul id="53ffa02d-0bb8-4c3f-acc2-d837deffa3ee" class="bulleted-list"><li style="list-style-type:circle">When purchasing a client_id, you are purchasing a subscription, and are charged monthly</li></ul><ul id="ae6b5fce-9d68-455b-9d36-e9bb980ca6cf" class="bulleted-list"><li style="list-style-type:circle">You may cancel your pay-api and Gumroad subscription at any time by using the link sent to the email address you registered with</li></ul></li></ul><ul id="7d03a36c-492d-41a2-b140-41080ee6cdb0" class="bulleted-list"><li style="list-style-type:disc">When you are invoiced monthly based on your token usage, we invoice you via Stripe and you are able to pay your invoice via Stripe. Stripe is certified to PCI Service Provider Level 1. To find more about Stripe&#x27;s security information, see: <a href="https://stripe.com/help/security.">https://stripe.com/help/security.</a></li></ul><h3 id="27dec202-68c3-4864-9fb5-c5cb0ed7c12e" class=""><strong>responsible disclosure</strong></h3><ul id="a0475573-63af-473b-b784-c48e067a450d" class="bulleted-list"><li style="list-style-type:disc">if you have discovered a vulnerability in the pay-api application or services, please contact us at security@pay-api.link</li></ul><ul id="0f461ced-ac4a-4a4e-9e70-a321d00f4252" class="bulleted-list"><li style="list-style-type:disc">we review all security concerns brought to our attention, and we take a proactive approach to emerging security issues</li></ul><h3 id="2f9c0e93-cf84-4dfe-9ddf-7fe39592666a" class=""><strong>contact us</strong></h3><p id="5c67c9cf-06fc-47cc-9e36-9590ad27fcab" class="">If you have any questions, please contact us at hello@pay-api.link</p></div></article></body></html>
