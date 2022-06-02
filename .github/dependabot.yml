@@ -19,6 +19,7 @@ updates:
       - dependency-name: aws-sdk
       - dependency-name: '@aws-sdk/*'
       - dependency-name: devtools-protocol
+      - dependency-name: husky
       - dependency-name: '@commitlint/cli'
       - dependency-name: '@commitlint/config-angular'
     versioning-strategy: increase
