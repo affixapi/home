@@ -21,10 +21,10 @@
   "devDependencies": {
     "@commitlint/cli": "16.2.4",
     "@commitlint/config-angular": "16.2.4",
-    "@pay-api/config-rc": "1.0.117",
-    "@pay-api/eslint-config-rc": "npm:@pay-api/config-rc@1.0.117",
+    "@pay-api/config-rc": "1.0.119",
+    "@pay-api/eslint-config-rc": "npm:@pay-api/config-rc@1.0.119",
     "depcheck": "1.4.3",
-    "eslint": "8.16.0",
+    "eslint": "8.18.0",
     "gh-pages": "4.0.0",
     "husky": "8.0.1"
   },
