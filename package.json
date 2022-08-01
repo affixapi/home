@@ -21,7 +21,7 @@
   "devDependencies": {
     "@commitlint/cli": "16.2.4",
     "@commitlint/config-angular": "16.2.4",
-    "@pay-api/config-rc": "1.0.119",
+    "@pay-api/config-rc": "1.0.121",
     "@pay-api/eslint-config-rc": "npm:@pay-api/config-rc@1.0.119",
     "depcheck": "1.4.3",
     "eslint": "8.21.0",
