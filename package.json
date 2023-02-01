@@ -25,7 +25,7 @@
     "@pay-api/eslint-config-rc": "npm:@pay-api/config-rc@1.0.119",
     "depcheck": "1.4.3",
     "eslint": "8.31.0",
-    "gh-pages": "4.0.0",
+    "gh-pages": "5.0.0",
     "husky": "8.0.1"
   },
   "commitlint": {
